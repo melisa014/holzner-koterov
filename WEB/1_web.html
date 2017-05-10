@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>
+            Экспериментальный Web
+        </title>
+    </head>
+    <body>
+        <form method="post" action="2_phpFormData.php">
+            <b> 1) Введите Ваше имя </b><br><br>
+            <input name="name" type="text"> <br><br>
+            <b> Выберите любимые песни </b><br><br>
+            <select name="food[]" multiple>
+                <option> Хорошие </option>
+                <option> Громкие </option>
+                <option> Печальные </option>
+                <option> Под гитару </option>
+            </select><br><br>
+            <input type="submit" value="ок">
+        </form> <br><br>
+        <form method="post" action="3_phpServer.php">
+            <b> 2) Вывести имя текущего скрипта </b><br><br>
+            <input type="submit" value="ok">
+        </form><br><br>
+        <form method="post" action="4_phpBrowser.php">
+            <b> 3) Определить тип браузера </b><br><br>
+            <input type="submit" value="ok">
+        </form><br><br> 
+        <b> 4) Выберите скрипт для загрузки </b>
+        <form name="form1" method="post" action="5_phpRedirect.php">
+            <input type="submit" name="button" value="7_phpSingle">
+        </form>
+        <form name="form2" method="post" action="5_phpRedirect.php">
+            <input type="submit" name="button" value="3_phpServer">
+        </form><br><br>
+        <form method="post" action="6_phpTextArray.php">
+            <b> 5) То, что Вы здесь введёте попадёт в массив Text </b><br><br>
+            <input type="text" name="textdata[name]"><br>
+            <input type="text" name="textdata[color]"><br>
+            <input type="submit" value="Вывести">
+        </form><br><br>
+    </body>
+</html>
