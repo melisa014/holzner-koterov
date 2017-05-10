@@ -9,7 +9,7 @@
     </head>
     <body>
         <?php
-            $connection = mysqli_connect("localhost")
+            $connection = mysqli_connect("localhost") // так не ндао делать
                 or die ("Ошибка подключения к серверу");
             $db = mysqli_select_db("db", $connection)
                 or die ("Ошибка выбора базы данных");
