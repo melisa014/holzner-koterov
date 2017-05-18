@@ -32,6 +32,8 @@ class DBO // db object
     // создаём таблицу средствами PDO  
     public function createTable(){
 
+        $b = new MyClass2();
+        $dbc = 123;
         if ($this->dbc) { 
             if ($this->dbc->query("CREATE TABLE IF NOT EXISTS `users` (
                         `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -68,5 +70,21 @@ class DBO // db object
     {
         echo ('<br>' . $str  . '<br>');
     }
+    
+    public function showBases() {
+        return $this->dbc->query("show bases")->fetchAll();
+    }
  
 }
+
+
+class MyClass2 // db object
+{ 
+    public $dbc = 0;
+}
+
+
+$d = new DBO();
+
+$d->tryConnect();
+$a=$d->showBases();
