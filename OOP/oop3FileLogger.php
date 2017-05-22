@@ -10,20 +10,23 @@ class FileLogger
     //Дальше описаны методы класса
     // Запись строк в файл-журнал
     
-    public function __consruct($name, $fname) 
+    public function __construct($name, $fname) 
     {
+        echo "Конструктор запустился, файл открыт <br>";
         $this->name = $name; //пользователь указывает имя журнала
         $this->f = fopen($fname, "a+"); //пользователь указывает имя файла, который открывает конструктор для записи
     }
     
     public function log($str) //добавляет строку в массив lines, который накапливает в буфере все строки до закрытия программы
     {
-        $this->lines[] = $str;  // сохраняем строку в массив
+        $date = date('d-F-Y H:i:s');
+        $this->lines[] = "$date $str \n";  // сохраняем строку в массив
     }
     
     public function __destruct() //Добавляет накопленные в буфере строки в файл, закрывает файл.
     {
-        fwrite($this->f, join("", $this->lines));
+        echo "Деструктор запустился, строки записаны <br>";
+        fwrite($this->f, join($this->lines));
         fclose($this->f);
     }
    

@@ -3,18 +3,25 @@
 class MyClass
 {
     //Здесь описаны свойства/поля класса
-    public $re, $im;
+    /*public $re, $im;*/
+    const NAME = "Комплексные числа в действии";
+    
 
     //Дальше описаны методы класса
     // 1) Создание комплексных чисел, операции с ними и конструктор
     
-    function __construct($re=0, $im=0)    // Создание комплексного числа
+/*    function __construct($re=0, $im=0)    // Создание комплексного числа
     {
         $this->re = $re;
         $this->im = $im;
+    }*/
+    
+    public static function printTitle() //Печать заголовка, содержащегося в константе класса
+    {
+        echo self::NAME, "<br>";
     }
 
-    public function add($a, $b)  // Добавление числа к комплексному числу
+ /*   public function add($a, $b)  // Добавление числа к комплексному числу
     {
         $this->re += $a;
         $this->im += $b; 
@@ -35,5 +42,5 @@ class MyClass
     {
         $string = "$this->re + $this->im i";
         return $string;
-    }
+    }*/
 }
