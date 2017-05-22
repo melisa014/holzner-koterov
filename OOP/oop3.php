@@ -29,8 +29,8 @@
         
         require_once 'oop3FileLogger.php';
         
-        $jor = new FileLogger("Комплексные числа", 'C:/OpenServer/domains/testsite/OOP/complex.txt');
-        $jor->log("строка строка строка");
+        $jor = new FileLogger("Комплексные числа", $_SERVER['DOCUMENT_ROOT'] . '/OOP/complex.txt');
+        $jor->log("строка строка строка") ;
                        
         ?>
     </body>
