@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>JavaScript</title>
+        <!--Четвёртый способ подключения JS - с пом подключения отдельного файла-->
+        <!--<script type="application/javascript" src="http://Путь_к_файлу_со_скриптом">
+        </script>-->
+    </head>
+    <body>
+        <H1><em>Привет, Юля!</em></H1>
+        
+        <!--Первый способ подключения JS - с пом тегом script-->
+<!--    <script type="application/javascript">
+            alert('Hello, World!');
+        </script>-->
+       
+        <!--Второй способ подключения JS - с пом "ненавязчивого JS" (здесь - ф-ция onclick и обращение к эл-ту по его id)-->
+        <script> 
+            window.onload = function() {
+                var linkWithAlert = document.getElementById("alertLink");
+                linkWithAlert.onclick = function() {
+                    return confirm('Вы уверены?'); 
+                };
+            };
+        </script>    
+        
+        <!--Третий способ подключения JS - прямо внутри объекта-->
+        <a href="Smth_more.jpg" id="alertLink" <!--onclick="return confirm('Вы уверены?');-->>
+            Открыть картинку
+        </a>
+        
+    </body>
+</html>

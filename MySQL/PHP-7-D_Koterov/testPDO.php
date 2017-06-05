@@ -103,31 +103,5 @@
             echo "Ошибка-исключение: ", $ex->getMessage();
         }
     */             
-    //Параметризация запросов с помощью подготовки prepsre(с параметрами) и задания этих параметров execute
-        try {
-            $query = "select*
-                    from users
-                    where name = :name";  
-            $user = $pdo->prepare($query);  
-            $user->execute(['name' => 'Кирилл']); 
-            echo $user->fetch()['user_id'], " - ", $user->fetch()['name']; 
-        } catch (Exception $ex) {
-            echo "Ошибка-исключение: ", $ex->getMessage();
-        }
-        
-        echo "<p>";
-        
-        try {
-            $query = "select*
-                    from users
-                    where name = :name";  
-            $user = $pdo->prepare($query);  
-            $user->execute(['name' => 'Кирилл']); 
-            while ($us = $user->fetch()) {
-                echo $us['user_id'], " - ", $us['name'];
-            }
-        } catch (Exception $ex) {
-            echo "Ошибка-исключение: ", $ex->getMessage();
-        }
-        
+
         
