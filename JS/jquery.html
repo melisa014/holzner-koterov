@@ -3,13 +3,13 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Хелоу ворлд:)</title>
-        <style>
-            a:hover {color : aqua;}
-            #my p.announce, .tt.pm li li a:hover+span { color: #f00; }
-        </style>
+        <script src="jquery-3.2.1.js"></script>
+        <!--<script src="jqueryUsing.js"></script>-->
+        <script src="debugging.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-ico">
     </head>
     <body>
-        <h1>Привет! Здесь мы познакомимся с JQuery</h1>
+        <h1>Привет! Здесь мы познакомимся с <span>JQuery</span></h1>
         <article id="my">
             <h4>JQuery - это библиотека (framework) JavaScript, 
                 обеспечивающая интерактивную работу страницы.</h4>
@@ -18,9 +18,10 @@
                 Также библиотека jQuery предоставляет удобный API для работы с AJAX. 
                 Сейчас разработка jQuery ведётся командой jQuery во главе с Джоном Резигом.</p>
         </article>
-        <article>
-            <h4 class="tt">Возможности JQuery</h4>
-            <ul class="pm"> 
+        <article class="tt pm">
+            <img src="jquery.png" alt="logo is here">
+            <h4>Возможности JQuery</h4>
+            <ul> 
                 <li>Движок кросс-браузерных CSS-селекторов Sizzle, выделившийся в отдельный проект;</li>
                 <li>Переход по дереву DOM, включая поддержку XPath как плагина;</li>
                 <li>События;</li>
@@ -37,14 +38,10 @@
         </article> 
         <footer>
             <h4>Источники</h4>
-            <p>Материал из Википедии — свободной энциклопедии https://ru.wikipedia.org/wiki/JQuery<br>
-            "JQuery для начинающих". А.Шевчук</p>
+            <p>Материал из <a href="https://ru.wikipedia.org/wiki/JQuery">Википедии</a> — свободной энциклопедии <br>
+                "JQuery для начинающих". <span>А.Шевчук</span></p>
         </footer>
+       
     </body>
 </html>
 
-
-<!--Вот еще кусочек CSS для тренировки, напишите соответствующий
-ему HTML (это тоже вопрос с собеседования ;):
-
-#my p.announce, .tt.pm li li a:hover+span { color: #f00; }-->
