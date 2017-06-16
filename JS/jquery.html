@@ -4,8 +4,8 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>Хелоу ворлд:)</title>
         <script src="jquery-3.2.1.js"></script>
-        <!--<script src="jqueryUsing.js"></script>-->
-        <script src="debugging.js"></script>
+        <script src="jqueryUsing.js"></script>
+        <!--<script src="debugging.js"></script>-->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-ico">
     </head>
     <body>
@@ -19,23 +19,37 @@
                 Сейчас разработка jQuery ведётся командой jQuery во главе с Джоном Резигом.</p>
         </article>
         <article class="tt pm">
-            <img src="jquery.png" alt="logo is here">
+            <div id="logo"><img src="jquery.png" alt="logo is here"></div>
             <h4>Возможности JQuery</h4>
-            <ul> 
-                <li>Движок кросс-браузерных CSS-селекторов Sizzle, выделившийся в отдельный проект;</li>
-                <li>Переход по дереву DOM, включая поддержку XPath как плагина;</li>
-                <li>События;</li>
-                <li>Визуальные эффекты;</li>
-                <li>AJAX-дополнения;</li>
-                <li>JavaScript-плагины;</li>
+            <ul class="navigation"> 
+                <li><a href="/JS/img/sizzle.html">Движок кросс-браузерных CSS-селекторов Sizzle, выделившийся в отдельный проект;</a></li>
+                <li><a href="/JS/img/html-dom.gif">Переход по дереву DOM, включая поддержку XPath как плагина;</a></li>
+                <li><a href="/JS/img/click.png">События;</a></li>
+                <li><a href="/JS/img/effects.jpg">Визуальные эффекты;</a></li>
+                <li><a href="/JS/img/ajax.jpg">AJAX-дополнения;</a></li>
+                <li><a href="/JS/img/js.jpg">JavaScript-плагины;</a></li>
                 <li>Дополнительные возможности:
                     <ul>
                         <li>Писать смешные книжки про JQuery</li>
-                        <li>а тут внезапно можно узнать о <a href="Smth_more.jpg">смысле жизни. </a><span>Опасно! Не рекомендуется переходить по ссылке лицам с неустойчивой психикой.</span></li>
+                        <li>а тут внезапно можно узнать о <a id="danger" href="Smth_more.jpg">смысле жизни. </a><span>Опасно! Не рекомендуется переходить по ссылке лицам с неустойчивой психикой.</span></li>
                     </ul>
                 </li>
             </ul>
         </article> 
+        <form method="post" action="forJquery.php">
+            <p>Ваше имя<br>
+                <input id="userName" type="text" name="name" value=""></p>
+            <p>Ваш уровень знаний<br>
+                <select name="level">
+                    <option>Отстой</option>
+                    <option>Низкий</option>
+                    <option>Нормальный</option>
+                    <option>Высокий</option>
+                    <option>Senjor developer</option>
+                </select></p>
+            <img id="loader-identity" src="/ajax-loader.gif" alt="gif">
+            <!--<input type="submit" name="sender" value="Ok">-->
+        </form>
         <footer>
             <h4>Источники</h4>
             <p>Материал из <a href="https://ru.wikipedia.org/wiki/JQuery">Википедии</a> — свободной энциклопедии <br>
